@@ -18,7 +18,6 @@ Este repositorio contiene dos microservicios desarrollados en Java utilizando Sp
 - **Java 17**
 - **Spring Boot**: Framework para construir aplicaciones web y microservicios.
 - **Spring Data JPA**: Para la gestión de la persistencia y el acceso a datos.
-- **H2 Database**: Base de datos en memoria utilizada para el desarrollo y pruebas.
 - **JUnit y Mockito**: Para pruebas unitarias y de integración.
 - **Karate DSL**: Para pruebas de API de alto nivel.
 
@@ -31,6 +30,4 @@ Este repositorio contiene dos microservicios desarrollados en Java utilizando Sp
 
 ### Clonar el Repositorio
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
+
