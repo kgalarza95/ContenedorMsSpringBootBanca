@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "2a5a218c-c9bf-47b2-a55f-9d3f0ce85a6c",
+		"name": "PROYECTO-BANCA-SB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24386881"
+	},
+	"item": [
+		{
+			"name": "MS1-CLIENTES",
+			"item": [
+				{
+					"name": "Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClienteById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes/1",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioSesion\": \"clopez\",\r\n    \"uuid\": \"0987654321-abcdef\",\r\n    \"nombreCliente\": \"Carlos López\",\r\n    \"generoCliente\": \"M\",\r\n    \"edadCliente\": 35,\r\n    \"identificacionCliente\": \"0987654321\",\r\n    \"direccionCliente\": \"Av. Siempre Viva 123\",\r\n    \"telefonoCliente\": \"0998765432\",\r\n    \"clienteidCliente\": null,\r\n    \"contrasenaCliente\": \"securePass\",\r\n    \"estadoCliente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreCliente\": \"Carlos López\",\r\n    \"generoCliente\": \"M\",\r\n    \"edadCliente\": 35,\r\n    \"identificacionCliente\": \"0987654321\",\r\n    \"direccionCliente\": \"Av. Siempre Viva 123\",\r\n    \"telefonoCliente\": \"0998765432\",\r\n    \"clienteidCliente\": 1,\r\n    \"contrasenaCliente\": \"securePass\",\r\n    \"estadoCliente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes/1",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarParcialCliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreCliente\": \"Carlos López\",\r\n    \"generoCliente\": \"M\",\r\n    \"edadCliente\": 35,\r\n    \"identificacionCliente\": \"0987654321\",\r\n    \"direccionCliente\": \"Av. Siempre Viva 123\",\r\n    \"telefonoCliente\": \"0998765432\",\r\n    \"clienteidCliente\": 1,\r\n    \"contrasenaCliente\": \"securePass\",\r\n    \"estadoCliente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url-context}}/v1/clientes/1",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS2-CUENTAS",
+			"item": [
+				{
+					"name": "Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CuentaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioSesion\": \"kgalarza\",\r\n    \"uuid\": \"23243432434324\",\r\n    \"numeroCuenta\": \"58554777777\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoEnLinea\": 1000,\r\n    \"estado\": true,\r\n    \"clienteid\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarCuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"58554777777\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoEnLinea\": 1000.0,\r\n    \"estado\": true,\r\n    \"clienteid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}/14",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarParcialCuenta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"numeroCuenta\": \"58554777777\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoEnLinea\": 1000.0,\r\n    \"estado\": true,\r\n    \"clienteid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}/14",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"1234567890\",\r\n    \"direccion\": \"Calle Falsa 123, Ciudad\",\r\n    \"telefono\": \"555-1234\",\r\n    \"contrasena\": \"contrasenaSegura123\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS2-MOVIMIENTOS",
+			"item": [
+				{
+					"name": "Movimiento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovimientoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-movimientos}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-movimientos}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarMovimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioSesion\": \"kgalarza\",\r\n    \"uuid\": \"23243432434324\",\r\n    \"id\": 0,\r\n    \"numeroCuenta\": \"404004220\",\r\n    \"tipoCuenta\": \"ah\",\r\n    \"saldoInicial\": 1,\r\n    \"estado\": true,\r\n    \"clienteid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-movimientos}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-movimientos}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GeneraMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valorMovimiento\": -50.75,\r\n  \"descripcionMovimiento\": \"\",\r\n  \"idCuenta\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarParcialMovimiento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioSesion\": \"kgalarza\",\r\n    \"uuid\": \"23243432434324\",\r\n    \"id\": 12,\r\n    \"saldoInicial\": 1,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-movimientos}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-movimientos}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarMovimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"1234567890\",\r\n    \"direccion\": \"Calle Falsa 123, Ciudad\",\r\n    \"telefono\": \"555-1234\",\r\n    \"contrasena\": \"contrasenaSegura123\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-cuentas}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS2-REPORTES",
+			"item": [
+				{
+					"name": "EstadoCuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-reportes}}?fechaInicio=2020-01-01&fechaFin=2025-01-01",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-reportes}}"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2025-01-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EstadoCuentaTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/api/v1/{{uri-reportes}}/todos",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"api",
+								"v1",
+								"{{uri-reportes}}",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticacion",
+			"item": [
+				{
+					"name": "Swagger UI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url-context}}/swagger-ui/index.html",
+							"host": [
+								"{{base-url-context}}"
+							],
+							"path": [
+								"swagger-ui",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url-context",
+			"value": "http://localhost:8082/api",
+			"type": "string"
+		},
+		{
+			"key": "servidor",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "puerto",
+			"value": "8083",
+			"type": "string"
+		},
+		{
+			"key": "uri-cuentas",
+			"value": "cuentas",
+			"type": "string"
+		},
+		{
+			"key": "uri-movimientos",
+			"value": "movimientos",
+			"type": "string"
+		},
+		{
+			"key": "uri-reportes",
+			"value": "reportes",
+			"type": "string"
+		}
+	]
+}

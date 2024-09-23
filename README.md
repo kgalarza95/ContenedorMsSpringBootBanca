@@ -29,8 +29,3 @@ Este repositorio contiene dos microservicios desarrollados en Java utilizando Sp
 - Tener [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) instalado.
 - Tener [Maven](https://maven.apache.org/download.cgi) instalado.
 
-### Clonar el Repositorio
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
